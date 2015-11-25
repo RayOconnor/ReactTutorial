@@ -227,7 +227,7 @@ function drawAllZombies() {
 }
 
 function moveAllZombies() {
-	for (i = 0; i < zombies.length; i++) {
+	for (var i = 0; i < zombies.length; i++) {
 		zombies[i] = moveZombie(zombies[i]);
 	}
 }
@@ -265,7 +265,7 @@ function checkDadColliding(z) {
 }
 
 function checkCollidingAny() {
-	for (i = 0; i < zombies.length; i++) {
+	for (var i = 0; i < zombies.length; i++) {
 
 		//if zombies are offscreen they can be removed
 		if (zombies[i].x < -50) {
