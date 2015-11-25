@@ -228,7 +228,7 @@ function drawAllZombies() {
 
 function moveAllZombies() {
 	for (i = 0; i < zombies.length; i++) {
-		var zombies[i] = moveZombie(zombies[i]);
+		zombies[i] = moveZombie(zombies[i]);
 	}
 }
 
