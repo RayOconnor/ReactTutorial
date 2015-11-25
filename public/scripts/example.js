@@ -144,3 +144,16 @@ ReactDOM.render(
   <CommentBox url="/api/comments" pollInterval={2000} />,
   document.getElementById('content')
 );
+
+/*
+render: function() {
+  return (
+    <div className="commentBox">
+      <h1>Comments</h1>
+      <CommentList data={this.state.data} />
+      <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+    </div>
+  );
+}
+});
+*/
