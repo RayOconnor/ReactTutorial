@@ -266,7 +266,7 @@ function checkDadColliding(z) {
 }
 
 function checkCollidingAny() {
-	for (var i = 0; i < zombies.length; i++) {
+	for (i = 0; i < zombies.length; i++) {
 
 		//if zombies are offscreen they can be removed
 		if (zombies[i].x < -50) {
