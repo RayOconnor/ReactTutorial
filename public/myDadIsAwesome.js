@@ -17,6 +17,7 @@ var dad = {
 	frame: 0 //current frame to draw when running
 
 };
+var i;
 var score;
 var tick = 0;
 var floor = canvas.height - 100;
@@ -227,7 +228,7 @@ function drawAllZombies() {
 }
 
 function moveAllZombies() {
-	for (var i = 0; i < zombies.length; i++) {
+	for (i = 0; i < zombies.length; i++) {
 		zombies[i] = moveZombie(zombies[i]);
 	}
 }
