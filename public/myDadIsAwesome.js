@@ -17,6 +17,7 @@ var dad = {
 	frame: 0 //current frame to draw when running
 
 };
+var score;
 var tick = 0;
 var floor = canvas.height - 100;
 var gamescreen = 0; //game screen includes two title screens,
