@@ -19,7 +19,7 @@ var dad = {
 };
 var tick = 0;
 var floor = canvas.height - 100;
-var gamescreen = 0; //game screen includes two title screens, 
+var gamescreen = 0; //game screen includes two title screens,
 //the game and gameover screen
 
 var birdsSound = new Audio("birds.mp3"); // buffers automatically when created
@@ -64,7 +64,7 @@ gameoverReady = true;
 gameoverImage.src = "images/gameover.png";
 
 // aura image
-// 
+//
 var auraReady = false;
 var auraImage = new Image();
 auraImage.onload = function () {
@@ -102,7 +102,7 @@ houses2Image.src = "images/houses2.png";
 
 
 // dad1 image
-// 
+//
 var dadReady = false;
 var dadImage = new Image();
 dadImage.onload = function () {
@@ -111,7 +111,7 @@ dadReady = true;
 dadImage.src = "images/dad.png";
 
 // dad2 image
-// 
+//
 var dad2Ready = false;
 var dad2Image = new Image();
 dad2Image.onload = function () {
@@ -120,7 +120,7 @@ dad2Ready = true;
 dad2Image.src = "images/dad2.png";
 
 // dad3 image
-// 
+//
 var dad3Ready = false;
 var dad3Image = new Image();
 dad3Image.onload = function () {
@@ -137,7 +137,7 @@ dadjumpReady = true;
 dadjumpImage.src = "images/dadjump.png";
 
 // zombie image
-// 
+//
 var zombieReady = false;
 var zombieImage = new Image();
 zombieImage.onload = function () {
@@ -160,8 +160,8 @@ function drawDad() {
 			}
 			else {
 				ctx.drawImage(dad3Image, dad.x, dad.y);
-			} 
-			
+			}
+
 		}
 }
 
@@ -187,7 +187,7 @@ function dadJumpController() {
 			dad.yvelocity -= .75;
 			dad.y -= dad.yvelocity;
 		}
-	
+
 	//dad has hit the ground and should be adjusted back to normal
 	if(dad.y >= floor) {
 		dad.yvelocity = 0;
@@ -232,12 +232,12 @@ function moveAllZombies() {
 }
 
 function maybeSpawnZombie() {
-	
+
 	cooldown --;
-	
+
 	if(((Math.floor(Math.random() * 50) == 0) && cooldown <= 0) ||
 		cooldown <= -40)  {
-			
+
 		addNewZombie();
 		cooldown = 30;
 	}
@@ -256,7 +256,7 @@ function checkDadColliding(z) {
 			&& dad.y <= (z.y + 30)
 			&& z.y <= (dad.y + 30)
 		) {
-			
+
 			gamescreen = 3;
 			travelingSalesman.pause();
 	}
@@ -265,7 +265,7 @@ function checkDadColliding(z) {
 
 function checkCollidingAny() {
 	for (i = 0; i < zombies.length; i++) {
-		
+
 		//if zombies are offscreen they can be removed
 		if (zombies[i].x < -50) {
 			zombies.splice(i,1);
@@ -273,7 +273,7 @@ function checkCollidingAny() {
 		//the zombies are ordered by location and if
 		//the any zombie is reached with an x greater than 100
 		//than those following wil also be too far to collide
-		if (zombies[i].x > 100) break; 
+		if (zombies[i].x > 100) break;
 		checkDadColliding(zombies[i]);
 	}
 }
@@ -332,16 +332,16 @@ var update = function (modifier) {
 	}
 
 	if(gamescreen == 2) {
-		
+
 		dadJumpController();
-		
+
 		//move zombies
 		moveAllZombies();
 		tick ++;
-		
+
 		//maybe spawn a new zombie
 		maybeSpawnZombie();
-		
+
 		// Are they touching?
 		checkCollidingAny();
 	}
@@ -359,10 +359,10 @@ var update = function (modifier) {
 
 // Draw everything
 var render = function () {
-	
+
 	if (gamescreen == 0) {
 		if (ts1Ready) {
-			ctx.drawImage(ts1Image, 0, 0);	
+			ctx.drawImage(ts1Image, 0, 0);
 		}
 		ctx.fillStyle = "rgb(0, 0, 0)";
 		ctx.font = "20px Helvetica";
@@ -372,7 +372,7 @@ var render = function () {
 
 	if (gamescreen == 1) {
 		if (ts2Ready) {
-			ctx.drawImage(ts2Image, 0, 0);	
+			ctx.drawImage(ts2Image, 0, 0);
 		}
 		ctx.fillStyle = "rgb(250, 0, 0)";
 		ctx.font = "20px Helvetica";
@@ -389,7 +389,7 @@ var render = function () {
 		drawDad();
 		//drawZombie(zombie);
 		drawAllZombies();
-		
+
 		// Score
 		ctx.fillStyle = "rgb(0, 0, 0)";
 		ctx.font = "20px Helvetica";
@@ -403,12 +403,12 @@ var render = function () {
 			//draw game over screen
 			ctx.drawImage(gameoverImage, 0, 0);
 		}
-		
+
 		//draw frozen dead dad image
 		drawDad();
 		//draw all zombie images frozen
 		drawAllZombies();
-		
+
 		// Final Score
 		ctx.fillStyle = "rgb(250, 0, 0)";
 		ctx.font = "20px Helvetica";
@@ -434,12 +434,9 @@ var main = function () {
 
 // Cross-browser support for requestAnimationFrame
 var w = window;
-requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
+var requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
 
 // Let's play this game!
 var then = Date.now();
 reset();
 main();
-
-
-
