@@ -1,0 +1,135 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/boxen/nodenv/versions/v0.10.38/bin/node',
+1 verbose cli   '/opt/boxen/nodenv/versions/v0.10.38/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-verbose' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/roconnor/Documents/RayGitHub/ReactTutorial',
+5 verbose install   [ 'body-parser', 'express' ] ]
+6 info preinstall react-tutorial@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'body-parser@^1.4.3', null ]
+9 verbose cache add name=undefined spec="body-parser@^1.4.3" args=["body-parser@^1.4.3",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'body-parser@^1.4.3',
+10 verbose parsed url   path: 'body-parser@^1.4.3',
+10 verbose parsed url   href: 'body-parser@^1.4.3' }
+11 verbose cache add [ 'express@^4.4.5', null ]
+12 verbose cache add name=undefined spec="express@^4.4.5" args=["express@^4.4.5",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'express@^4.4.5',
+13 verbose parsed url   path: 'express@^4.4.5',
+13 verbose parsed url   href: 'express@^4.4.5' }
+14 verbose cache add name="body-parser" spec="^1.4.3" args=["body-parser","^1.4.3"]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: '^1.4.3',
+15 verbose parsed url   path: '^1.4.3',
+15 verbose parsed url   href: '^1.4.3' }
+16 verbose addNamed [ 'body-parser', '^1.4.3' ]
+17 verbose addNamed [ null, '>=1.4.3-0 <2.0.0-0' ]
+18 verbose cache add name="express" spec="^4.4.5" args=["express","^4.4.5"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: '^4.4.5',
+19 verbose parsed url   path: '^4.4.5',
+19 verbose parsed url   href: '^4.4.5' }
+20 verbose addNamed [ 'express', '^4.4.5' ]
+21 verbose addNamed [ null, '>=4.4.5-0 <5.0.0-0' ]
+22 silly lockFile d9294800-body-parser-1-4-3 body-parser@^1.4.3
+23 verbose lock body-parser@^1.4.3 /Users/roconnor/.npm/d9294800-body-parser-1-4-3.lock
+24 silly lockFile 2ccc2f38-express-4-4-5 express@^4.4.5
+25 verbose lock express@^4.4.5 /Users/roconnor/.npm/2ccc2f38-express-4-4-5.lock
+26 silly addNameRange { name: 'express', range: '>=4.4.5-0 <5.0.0-0', hasData: false }
+27 silly addNameRange { name: 'body-parser',
+27 silly addNameRange   range: '>=1.4.3-0 <2.0.0-0',
+27 silly addNameRange   hasData: false }
+28 verbose request where is /nexus/content/groups/npm-all/body-parser
+29 verbose request registry https://npm.hubteam.com/
+30 verbose request id f885d92e99b29ec7
+31 verbose url raw /nexus/content/groups/npm-all/body-parser
+32 verbose url resolving [ 'https://npm.hubteam.com/',
+32 verbose url resolving   './nexus/content/groups/npm-all/body-parser' ]
+33 verbose url resolved https://npm.hubteam.com/nexus/content/groups/npm-all/body-parser
+34 verbose request where is https://npm.hubteam.com/nexus/content/groups/npm-all/body-parser
+35 info trying registry request attempt 1 at 17:50:16
+36 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/body-parser
+37 verbose request where is /nexus/content/groups/npm-all/express
+38 verbose request registry https://npm.hubteam.com/
+39 verbose url raw /nexus/content/groups/npm-all/express
+40 verbose url resolving [ 'https://npm.hubteam.com/',
+40 verbose url resolving   './nexus/content/groups/npm-all/express' ]
+41 verbose url resolved https://npm.hubteam.com/nexus/content/groups/npm-all/express
+42 verbose request where is https://npm.hubteam.com/nexus/content/groups/npm-all/express
+43 info trying registry request attempt 1 at 17:50:16
+44 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/express
+45 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+46 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+47 info trying registry request attempt 2 at 17:51:42
+48 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/body-parser
+49 info trying registry request attempt 2 at 17:51:42
+50 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/express
+51 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+52 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+53 info trying registry request attempt 3 at 17:53:58
+54 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/body-parser
+55 info trying registry request attempt 3 at 17:53:58
+56 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/express
+57 silly registry.get cb [ 304, undefined ]
+58 silly lockFile d9294800-body-parser-1-4-3 body-parser@^1.4.3
+59 silly lockFile d9294800-body-parser-1-4-3 body-parser@^1.4.3
+60 silly registry.get cb [ 304, undefined ]
+61 silly lockFile 2ccc2f38-express-4-4-5 express@^4.4.5
+62 silly lockFile 2ccc2f38-express-4-4-5 express@^4.4.5
+63 error Error: failed to fetch from registry: https://npm.hubteam.com/nexus/content/groups/npm-all/body-parser
+63 error     at RegClient.<anonymous> (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:159:18)
+63 error     at cb (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:57:9)
+63 error     at RegClient.<anonymous> (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:156:10)
+63 error     at cb (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:166:9)
+63 error     at RegClient.<anonymous> (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:259:20)
+63 error     at Request._callback (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:238:20)
+63 error     at self.callback (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/request/request.js:236:22)
+63 error     at Request.emit (events.js:117:20)
+63 error     at ClientRequest.self.clientErrorHandler (/opt/boxen/nodenv/versions/v0.10.38/lib/node_modules/npm/node_modules/request/request.js:341:10)
+63 error     at ClientRequest.emit (events.js:95:17)
+64 error If you need help, you may report this *entire* log,
+64 error including the npm and node versions, at:
+64 error     <http://github.com/npm/npm/issues>
+65 error System Darwin 14.5.0
+66 error command "/opt/boxen/nodenv/versions/v0.10.38/bin/node" "/opt/boxen/nodenv/versions/v0.10.38/bin/npm" "install" "-verbose"
+67 error cwd /Users/roconnor/Documents/RayGitHub/ReactTutorial
+68 error node -v v0.10.38
+69 error npm -v 1.4.28
+70 verbose exit [ 1, true ]
